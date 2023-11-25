@@ -12,3 +12,5 @@ The UI should stand up on `http://localhost:7860/`
 
 
 ![lcm-lora-demo.gif](img%2Flcm-lora-demo.gif)
+
+[We took inspiration from this repo](https://github.com/flowtyone/flowty-realtime-lcm-canvas)
