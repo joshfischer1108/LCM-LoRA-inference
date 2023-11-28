@@ -63,6 +63,7 @@ def load(model_id="CompVis/stable-diffusion-v1-4"):
 
     def infer_no_image(
             prompt,
+            negative_prompt="",
             num_inference_steps=4,
             guidance_scale=1,
             strength=0.9,
@@ -72,6 +73,7 @@ def load(model_id="CompVis/stable-diffusion-v1-4"):
             with torch.autocast("cuda") if device == "cuda" else nullcontext():
                 return pipe(
                     prompt=prompt,
+                    negative_prompt=negative_prompt,
                     generator=generator.manual_seed(seed),
                     num_inference_steps=num_inference_steps,
                     guidance_scale=guidance_scale,
